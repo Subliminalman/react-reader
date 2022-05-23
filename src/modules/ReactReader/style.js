@@ -43,6 +43,10 @@ const reactReaderStyles = {
   next: {
     right: 1
   },
+  play: {
+    left:'50%',
+    marginLeft: -25
+  },
   arrow: {
     outline: 'none',
     border: 'none',
