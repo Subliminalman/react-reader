@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
-import { useSwipeable } from 'react-swipeable'
+// import { useSwipeable } from 'react-swipeable'
 import { EpubView } from '..'
 import defaultStyles from './style'
 
@@ -144,11 +144,11 @@ class ReactReader extends PureComponent {
         >
           {showToc && this.renderTocToggle()}
           <div style={styles.titleArea}>{title}</div>
-          <Swipeable
+          {/* <Swipeable
             onSwipedRight={this.prev}
             onSwipedLeft={this.next}
             trackMouse
-          >
+          > */}
             <div style={styles.reader}>
               <EpubView
                 ref={this.readerRef}
@@ -160,13 +160,19 @@ class ReactReader extends PureComponent {
               />
               {swipeable && <div style={styles.swipeWrapper} />}
             </div>
-          </Swipeable>
+          {/* </Swipeable> */}
           <button
             style={Object.assign({}, styles.arrow, styles.prev)}
             onClick={this.prev}
           >
             ‹
-          </button>
+          </button>     
+          <button
+            style={Object.assign({}, styles.arrow, styles.play)}
+            onClick={this.prev}
+          >
+            ‹
+          </button>       
           <button
             style={Object.assign({}, styles.arrow, styles.next)}
             onClick={this.next}
